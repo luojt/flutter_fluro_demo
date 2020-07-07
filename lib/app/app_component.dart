@@ -4,7 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_fluro_demo/config/application.dart';
 import 'package:flutter_fluro_demo/config/routes.dart';
 
-
+/**
+ * 主界面
+ */
 class AppComponent extends StatefulWidget {
   @override
   State createState() {
@@ -22,14 +24,13 @@ class AppComponentState extends State<AppComponent> {
   @override
   Widget build(BuildContext context) {
     final app = MaterialApp(
-      title: 'Fluro',
-      debugShowCheckedModeBanner: false,
+      title: 'Fluro框架',
+      debugShowCheckedModeBanner: false, //隐藏测试
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      onGenerateRoute: Application.router.generator,
+      onGenerateRoute: Application.router.generator,//注册路由
     );
-//    print("initial route = ${app.initialRoute}");
-    return app;
+    return app; //跳转主页
   }
 }
