@@ -15,8 +15,7 @@ class HomeComponent extends StatefulWidget {
 
 class HomeComponentState extends State<HomeComponent> {
   var _deepLinkOpacity = 1.0;
-  final _deepLinkURL =
-      "fluro://deeplink?path=/message&mesage=fluro%20rocks%21%21";
+  final _deepLinkURL = "fluro://deeplink?path=/message&mesage=fluro%20rocks%21%21";
   final _daysOfWeek = const [
     "Monday",
     "Tuesday",
@@ -88,18 +87,12 @@ class HomeComponentState extends State<HomeComponent> {
   @override
   Widget build(BuildContext context) {
     var menuWidgets = <Widget>[
-      menuButton(context, 'assets/images/ic_transform_native_hz.png',
-          "Native Animation", "native"),
-      menuButton(context, 'assets/images/ic_transform_fade_in_hz.png',
-          "Preset (Fade In)", "preset-fade"),
-      menuButton(context, 'assets/images/ic_transform_global_hz.png',
-          "Preset (Global transition)", "fixed-trans"),
-      menuButton(context, 'assets/images/ic_transform_custom_hz.png',
-          "Custom Transition", "custom"),
-      menuButton(context, 'assets/images/ic_result_hz.png', "Navigator Result",
-          "pop-result"),
-      menuButton(context, 'assets/images/ic_function_hz.png', "Function Call",
-          "function-call"),
+      menuButton(context, 'assets/images/ic_transform_native_hz.png', "原生动画", "native"),
+      menuButton(context, 'assets/images/ic_transform_fade_in_hz.png', "预设（淡入）", "preset-fade"),
+      menuButton(context, 'assets/images/ic_transform_global_hz.png', "预设（全局转换）", "fixed-trans"),
+      menuButton(context, 'assets/images/ic_transform_custom_hz.png', "自定义转换", "custom"),
+      menuButton(context, 'assets/images/ic_result_hz.png', "导航器结果", "pop-result"),
+      menuButton(context, 'assets/images/ic_function_hz.png', "函数调用", "function-call"),
     ];
 
     final size = MediaQuery.of(context).size;
@@ -132,15 +125,6 @@ class HomeComponentState extends State<HomeComponent> {
                 ),
               ),
             ),
-//            Padding(
-//              padding: EdgeInsets.only(top: 35.0, bottom: 25),
-//              child: Center(
-//                child: ConstrainedBox(
-//                  constraints: BoxConstraints.tightFor(height: 60.0),
-//                  child: deepLinkWidget(context),
-//                ),
-//              ),
-//            ),
           ],
         ),
       ),
@@ -148,8 +132,7 @@ class HomeComponentState extends State<HomeComponent> {
   }
 
   // helpers
-  Widget menuButton(
-      BuildContext context, String assetSrc, String title, String key) {
+  Widget menuButton(BuildContext context, String assetSrc, String title, String key) {
     return Padding(
       padding: EdgeInsets.all(4.0),
       child: Container(
